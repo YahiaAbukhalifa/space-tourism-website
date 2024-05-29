@@ -1,0 +1,153 @@
+@import "../../App.css";
+@import "../../styles/mixins.scss";
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  color: white;
+
+  .nav-container {
+    @include respond(large-screens) {
+      display: flex;
+      align-items: center;
+      float: right;
+      justify-content: space-between;
+    }
+    @include respond(tab-land) {
+      display: flex;
+      align-items: center;
+      float: right;
+      justify-content: space-between;
+    }
+    @include respond(tab-port) {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      inset: 0 0 0 30%;
+      padding: 10rem 2em;
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
+      align-items: baseline;
+      z-index: 1000;
+
+      &.visible {
+        display: flex;
+      }
+    }
+    @include respond(phone) {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      inset: 0 0 0 30%;
+      padding: 10rem 2em;
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
+      align-items: baseline;
+      z-index: 1000;
+
+      &.visible {
+        display: block;
+      }
+    }
+
+    .elements {
+      @include respond(large-screens) {
+        display: flex;
+        justify-content: space-between;
+        background: hsla(0, 0%, 100%, 0.1);
+        backdrop-filter: blur(1rem);
+        padding-block: 2rem;
+        padding-inline: clamp(3rem, 5vw, 10rem);
+        gap: clamp(1.5rem, 5vw, 3rem);
+        position: relative;
+      }
+      @include respond(tab-land) {
+        display: flex;
+        justify-content: space-between;
+        background: hsla(0, 0%, 100%, 0.1);
+        backdrop-filter: blur(1rem);
+        padding-block: 2rem;
+        padding-inline: clamp(3rem, 5vw, 10rem);
+        gap: clamp(1.5rem, 5vw, 3rem);
+        position: relative;
+      }
+      @include respond(tab-port) {
+        display: block;
+        background: none;
+        backdrop-filter: none;
+        padding: 0;
+      }
+      a {
+        color: var(--main-color);
+        font-size: 16px;
+        padding: 0 15px;
+        text-decoration: none;
+        position: relative;
+        padding-block: 10px;
+        &:hover,
+        &.active {
+          border-bottom: 2px #fff solid;
+        }
+        @include respond(tab-port) {
+          display: block;
+        }
+        @include respond(phone) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .logo {
+    padding: 10px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    margin-top: 2em;
+    float: left;
+    margin-left: 3rem;
+
+    @include respond(phone) {
+        position: fixed;
+    }
+    @include respond(tab-port) {
+        position: fixed;
+    }
+  }
+
+  .mobile-nav {
+    display: none;
+    @include respond(tab-port) {
+      display: block;
+      position: absolute;
+      z-index: 9999;
+      background: url('icon-hamburger.svg') no-repeat;
+      width: 2rem;
+      aspect-ratio: 1;
+      top: 2rem;
+      right: 2rem;
+      border: 0;
+
+      &.close-nav {
+        background: url('icon-close.svg') no-repeat;
+      }
+    }
+    @include respond(phone) {
+      display: block;
+      position: absolute;
+      z-index: 9999;
+      background: url('icon-hamburger.svg') no-repeat;
+      width: 2rem;
+      aspect-ratio: 1;
+      top: 2rem;
+      right: 2rem;
+      border: 0;
+
+      &.close-nav {
+        background: url('icon-close.svg') no-repeat;
+      }
+    }
+  }
+}

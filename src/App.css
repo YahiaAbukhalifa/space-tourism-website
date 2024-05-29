@@ -1,0 +1,12 @@
+:root{
+  --main-color : #ffff;
+  --second-color : #D0D6F9;
+  --main-font : "Barlow Condensed", sans-serif;
+  --second-font :  "Bellefair", serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}

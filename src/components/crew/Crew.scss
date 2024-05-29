@@ -1,0 +1,140 @@
+@import "../../App.css";
+@import "../../styles/mixins.scss";
+
+.crew {
+  background-image: url("./background-crew-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+
+  @include respond(tab-land) {
+      background-image: url("./background-crew-tablet.jpg");
+  }
+}
+.promoCrew {
+  margin-top: 5px;
+  width: 100%;
+  text-align: left;
+  font-family: var(--main-font);
+  display: flex;
+  padding: 5px;
+  font-size: 28px;
+  margin-left: 6rem;
+  @include respond(phone) {
+    margin-top: 6rem;
+  }
+  @include respond(tab-port) {
+    margin-top: 6rem;
+  }
+  .pageNumber {
+    font-weight: 500;
+    margin: 5px;
+    color: rgb(80, 83, 90);
+  }
+  .promoTxt {
+    margin: 5px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+.crew-container {
+  .filter {
+    width: 20%;
+    margin-left: 6rem;
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-land) {
+      width: 100%;
+      margin-top: 30px;
+      
+    }
+
+    div {
+      width: 15px;
+      height: 15px;
+      background-color: #979797;
+      border-radius: 50%;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    div.active {
+      background-color: #fff;
+    }
+  }
+}
+.Crew-card {
+  .crew-image {
+    width: 30%;
+    display: flex;
+    height: 70vh;
+    margin-right: 6rem;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land) {
+      width: 50%;
+      height: auto;
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      float: none;
+      margin-top: 30px;
+    }
+  }
+  .crew-details {
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land) {
+      width: 100%;
+      margin: auto;
+      display: block;
+      order: 1;
+    }
+
+    .detailes {
+      margin-top: 6rem;
+      overflow-wrap: break-word;
+      margin-left: 6rem;
+
+      @include respond(phone) {
+        margin-top: 15px;
+        margin-left: 2rem;
+      }
+      @include respond(tab-port) {
+        margin-top: 15px;
+        margin-left: 2rem;      
+      }
+      .role {
+        font-size: 32px;
+        font-family: var(--second-font);
+        font-weight: 700;
+        margin: 5px;
+        color: rgb(99, 103, 114);
+        text-transform: uppercase;
+      }
+
+      h3 {
+        font-size: 56px;
+        margin: 5px;
+        font-family: var(--second-font);
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      .bio {
+        color: var(--second-color);
+        font-size: 18px;
+        line-height: 36px;
+        margin: 5px;
+      }
+    }
+  }
+}

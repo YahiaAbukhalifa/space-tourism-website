@@ -1,0 +1,15 @@
+@import "../../App.css";
+@import "../../styles/mixins.scss";
+.homePage{
+    background-image:url("../../img/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    @include respond(tab-land){
+        background-image:url("../../img/home/background-home-tablet.jpg");
+    }
+    @include respond(phone){
+        background-image:url("../../img/home/background-home-mobile.jpg");
+    }
+}

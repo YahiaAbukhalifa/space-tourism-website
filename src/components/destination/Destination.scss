@@ -1,0 +1,172 @@
+@import "../../App.css";
+@import "../../styles/mixins.scss";
+
+.destination {
+  background-image: url("./background-destination-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  @include respond(tab-land) {
+    background-image: url("./background-destination-tablet.jpg");
+  }
+}
+.promoDestination {
+  width: 100%;
+  text-align: left;
+  font-family: var(--main-font);
+  display: flex;
+  padding: 5px;
+  font-size: 28px;
+  margin-left: 6rem;
+  @include respond(phone) {
+    margin-top: 6rem;
+  }
+  @include respond(tab-port) {
+    margin-top: 6rem;
+  }
+  .pageNumber {
+    font-weight: 500;
+    margin: 5px;
+    color: rgb(80, 83, 90);
+  }
+
+  .promoTxt {
+    margin: 5px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+.destinations-container {
+  .filter {
+    float: right;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land) {
+      width: 100%;
+      margin: 30px 0 30px 0;
+    }
+
+    p {
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: var(--main-font);
+      font-size: 16px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    p.active,
+    p:hover {
+      border-bottom: 2px solid #fff;
+    }
+
+  }
+}
+.destination-card {
+  width: 100% !important;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(tab-land) {
+    display: block;
+    text-align: center;
+    order: 1;
+  }
+
+  img {
+    width: 30%;
+    height: 80%;
+    margin: auto;
+
+    @include respond(tab-land) {
+      width: 50%;
+      height: auto;
+      display: block;
+      margin: auto;
+      max-width: 100%;
+    }
+
+  }
+
+  .destination-details {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land) {
+      display: block;
+      margin: auto;
+      width: 80%;
+    }
+
+    .detailes {
+      margin: 0 auto;
+      width: 65%;
+
+      @include respond(tab-land) {
+        width: 100%;
+      }
+
+      h3 {
+        font-size: 100px;
+        color: #fff;
+        font-family: var(--second-font);
+        text-transform: uppercase;
+        
+        @include respond(tab-land) {
+          margin: 30px 0 30px 0;
+        }
+
+      }
+      .description {
+        margin-top: 5px;
+        font-size: 18px;
+        font-family: var(--main-font);
+        color: var(--second-color);
+        line-height: 32px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #fff;
+
+        @include respond(tab-land) {
+          margin: 30px 0 30px 0;
+        }
+
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        width: 80%;
+
+        @include respond(tab-land) {
+          width: 50%;
+          margin: 30px auto;
+        }
+        
+      }
+      ul li {
+        font-size: 14px;
+        color: var(--second-color);
+        text-transform: uppercase;
+        font-family: var(--main-font);
+      }
+      ul p {
+        list-style: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: var(--second-font);
+        color: #fff;
+        margin-top: 10px;
+        justify-content: space-between;
+      }
+    }
+  }
+}
