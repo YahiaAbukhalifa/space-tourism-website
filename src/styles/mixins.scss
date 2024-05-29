@@ -15,7 +15,7 @@
         }
     }
     @if $breakpoint == large-screens {
-        @media screen and (max-width: 1400px){
+        @media screen and (max-width: 1900px){
             @content;
         }
     }
