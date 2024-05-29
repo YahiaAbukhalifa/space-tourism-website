@@ -26,7 +26,7 @@ function Header() {
         aria-expanded={navVisible}
         onClick={toggleNav}
       >
-        <span className="sr-only">Toggle Navigation</span>
+        <span className="sr-only"></span>
       </button>
       <div className={`nav-container ${navVisible ? "visible" : ""}`}>
         <div className="elements">
