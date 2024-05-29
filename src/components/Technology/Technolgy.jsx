@@ -39,27 +39,24 @@ const TechnologiesList = () => {
         </div>
         <div className="tech-container">
           <div className="filter">
-            <a
-              href="#"
+            <p
               className={selectedTech === "Launch vehicle" ? "active" : ""}
               onClick={() => setSelectedTech("Launch vehicle")}
             >
               1
-            </a>
-            <a
-              href="#"
+            </p>
+            <p
               className={selectedTech === "Spaceport" ? "active" : ""}
               onClick={() => setSelectedTech("Spaceport")}
             >
               2
-            </a>
-            <a
-              href="#"
+            </p>
+            <p
               className={selectedTech === "Space capsule" ? "active" : ""}
               onClick={() => setSelectedTech("Space capsule")}
             >
               3
-            </a>
+            </p>
           </div>
         </div>
         <div className="tech-list">
